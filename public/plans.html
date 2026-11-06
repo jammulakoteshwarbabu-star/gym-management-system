@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Membership Plans</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="members.html">Members</a>
+            <a href="plans.html">Plans</a>
+            <a href="subscriptions.html">Subscriptions</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Add Membership Plan</h2>
+        <form id="planForm">
+            <input name="plan_name" placeholder="Plan name" required>
+            <input name="duration_months" type="number" min="1" placeholder="Duration in months" required>
+            <input name="fee" type="number" min="0" step="0.01" placeholder="Fee in rupees" required>
+            <textarea name="description" placeholder="Plan description"></textarea>
+            <button type="submit">Add Plan</button>
+        </form>
+        <p id="planMessage"></p>
+        <h2>Available Plans</h2>
+        <div id="plansList" class="cards"></div>
+    </main>
+</body>
+</html>

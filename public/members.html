@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Members</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Manage Members</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="members.html">Members</a>
+            <a href="plans.html">Plans</a>
+            <a href="subscriptions.html">Subscriptions</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Add Member</h2>
+        <form id="memberForm">
+            <input name="name" placeholder="Full name" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="phone" placeholder="Phone">
+            <label>Join date <input name="join_date" type="date" required></label>
+            <select name="status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <button type="submit">Add Member</button>
+        </form>
+        <p id="memberMessage"></p>
+        <h2>Members List</h2>
+        <table>
+            <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Join Date</th><th>Status</th></tr></thead>
+            <tbody id="membersTable"></tbody>
+        </table>
+    </main>
+</body>
+</html>

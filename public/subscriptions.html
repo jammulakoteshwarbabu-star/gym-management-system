@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Manage Subscriptions</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="members.html">Members</a>
+            <a href="plans.html">Plans</a>
+            <a href="subscriptions.html">Subscriptions</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Enroll Member</h2>
+        <form id="subscriptionForm">
+            <label>Member <select name="member_id" id="memberSelect" required></select></label>
+            <label>Plan <select name="plan_id" id="planSelect" required></select></label>
+            <label>Start date <input name="start_date" type="date" required></label>
+            <label>Expiry date <input name="end_date" type="date" required></label>
+            <select name="payment_status">
+                <option value="Pending">Pending</option>
+                <option value="Paid">Paid</option>
+                <option value="Overdue">Overdue</option>
+            </select>
+            <button type="submit">Create Subscription</button>
+        </form>
+        <p id="subscriptionMessage"></p>
+        <h2>All Subscriptions</h2>
+        <table>
+            <thead><tr><th>ID</th><th>Member</th><th>Plan</th><th>Start Date</th><th>Expiry Date</th><th>Payment</th></tr></thead>
+            <tbody id="subscriptionsTable"></tbody>
+        </table>
+    </main>
+</body>
+</html>
